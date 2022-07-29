@@ -15,15 +15,22 @@
 
 <div class="container">
     <div class="row">
-        @foreach (var animal in shuffledAnimals)
+        @for (var animalNumber = 0; animalNumber < shuffledAnimals.Count; animalNumber++)
             {
+                var animal = shuffledAnimals[animalNumber];
+                var uniqueDescription = $"Button #{animalNumber}";
                 <div class="col-3">
-                    <button type="button" class="btn btn-outline-dark">
+                    <button @onclick="@(() => ButtonClick(animal, uniqueDescription))" type="button" class="btn btn-outline-dark">
                         <h1>@animal</h1>
                     </button>
                 </div>
             }
     </div>
+
+    <div class="row">
+       <h2>Matches found: @matchesFound</h2>
+    </div>
+
 </div>
 
 @code {
@@ -39,19 +46,50 @@
         "🐹", "🐹",
     };
 
-     List<string> shuffledAnimals = new List<string>();
-                
-            protected override void OnInitialized()
+    List<string> shuffledAnimals = new List<string>();
+    int matchesFound = 0;
+
+    protected override void OnInitialized()
+    {
+        SetUpGame();
+    }
+
+    private void SetUpGame()
+    {
+
+        Random random = new Random();
+        shuffledAnimals = animalEmoji
+            .OrderBy(item => random.Next())
+            .ToList();
+        matchesFound = 0;
+    }
+
+    // this is the code for making the button click event 
+    string lastAnimalFound = string.Empty;
+    string lastDescription = string .Empty;
+    private void ButtonClick(string animal, string animalDescription)
+    {
+        if (lastAnimalFound == string.Empty)
+        {
+            // First selection of the pair. Remember it.
+            lastAnimalFound = animal;
+            lastDescription = animalDescription;
+        }
+        else if ((lastAnimalFound == animal) && (animalDescription != lastDescription))
+        {
+            // Match found! Reset for next pair.
+            lastAnimalFound = string.Empty;
+
+            // Replace found animals with empty string to hide them.
+            shuffledAnimals = shuffledAnimals
+                .Select(a => a.Replace(animal, string.Empty))
+                .ToList();
+            matchesFound++;
+            if (matchesFound ==8)
             {
                 SetUpGame();
             }
+        }
+    }
 
-            private void SetUpGame()
-            {
-                Random random = new Random();
-                shuffledAnimals = animalEmoji
-                    .OrderBy(item => random.Next())
-                    .ToList();
-            }
- 
     }
