@@ -22,20 +22,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/annamariamountaki/projects/BlazorMatchGame/BlazorMatchGame/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/annamariamountaki/projects/BlazorMatchGame/BlazorMatchGame/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/annamariamountaki/projects/BlazorMatchGame/BlazorMatchGame/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/annamariamountaki/projects/BlazorMatchGame/BlazorMatchGame/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/annamariamountaki/projects/BlazorMatchGame/BlazorMatchGame/_Imports.razor]

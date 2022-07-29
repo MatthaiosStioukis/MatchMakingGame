@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{C3F18573-DBA2-46D6-A1C6-4D8BD0FAFF51}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.BlazorMatchGame PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="BlazorMatchGame/Pages/Index.razor">
     <Files>
-      <File FileName="BlazorMatchGame/Pages/Index.razor" Line="82" Column="6" />
+      <File FileName="BlazorMatchGame/Pages/Index.razor" Line="118" Column="6" />
       <File FileName="BlazorMatchGame/Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -23,7 +24,6 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.BlazorMatchGame PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
